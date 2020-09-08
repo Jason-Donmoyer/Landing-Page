@@ -26,6 +26,7 @@ const mainNavArea = document.querySelector('#main-nav-list');
 
 const mainContent = document.getElementById('main-content');
 
+
 // Get content onto page
 
 navLinks.forEach((item) => {
@@ -39,7 +40,13 @@ navLinks.forEach((item) => {
   newListItem.appendChild(listItemLink);
   mainNavArea.appendChild(newListItem);
 
+  let flexContainer = document.createElement('div');
+  flexContainer.classList.add('flex-container');
   let newContent = document.createElement('p');
+  let newContentHeader = document.createElement('h2');
+  newContentHeader.innerHTML = item.title;
   newContent.textContent = item.content;
-  mainContent.appendChild(newContent);
+  flexContainer.appendChild(newContentHeader);
+  flexContainer.appendChild(newContent);
+  mainContent.appendChild(flexContainer);
 });
