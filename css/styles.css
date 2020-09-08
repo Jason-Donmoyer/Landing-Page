@@ -1,3 +1,5 @@
+/*********** VARIABLES ***********/
+
 :root {
   --light-grey: #e0ece4;
   --light-red: #ff4b5c;
@@ -5,7 +7,7 @@
   --light-blue: #66bfbf;
 }
 
-
+/*********** GRID CONTAINER ***********/
 
 .container {
   display: grid;
@@ -18,11 +20,18 @@
 }
 
 
+/*********** HEADER ***********/
+
 
 header {
   grid-area: hd;
   background-color: var(--light-red);
   color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  ;
+  justify-content: space-between;
 }
 
 h1 {
@@ -30,11 +39,27 @@ h1 {
   padding-left: 0.3em;
 }
 
-/* MAIN NAv */
+/*********** Hmburger Menu ************/
+
+
+#hamburger-menu {
+  margin-right: 0.6em;
+  cursor: pointer;
+}
+
+
+.burger-bar {
+  height: 6px;
+  width: 45px;
+  background-color: #fff;
+  margin: 8px 0;
+}
+
+/************ MAIN NAv ************/
 
 nav {
   grid-area: nv;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -60,7 +85,16 @@ nav {
 #main-nav-list li a {
   text-decoration: none;
   display: block;
+  color: #fff;
+  text-shadow: 1px 1px 1px var(--light-red);
 }
+
+#main-nav-list li a:hover {
+  color: var(--light-red);
+  text-shadow: 1px 1px 1px #fff;
+}
+
+/************ MAIN CONTENT ************/
 
 
 main {
@@ -71,9 +105,12 @@ main {
   display: flex;
   flex-direction: column;
   height: 200px;
-  border: 2px solid seagreen;
+  border-top: 20px solid var(--dark-blue);
   padding: 20px;
 }
+
+
+/*********** FOOTER ***********/
 
 
 footer {
