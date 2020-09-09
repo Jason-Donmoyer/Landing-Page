@@ -136,6 +136,11 @@ main {
 
 footer {
   grid-area: ft;
+  height: 40px;
+  background-color: var(--light-blue);
+  color: var(--light-red);
+  text-align: center;
+  line-height: 40px;
 }
 
 
@@ -144,13 +149,19 @@ footer {
 
 
 @media screen and (min-width: 600px) {
-  .container {
+  /* .container {
     grid-template-areas:
       "hd hd nv nv"
       "hd hd nv nv"
       "mn mn mn mn"
       "ft ft ft ft"
+  } */
+
+  header {
+    justify-content: center;
+    align-items: center;
   }
+
 
   #hamburger-menu {
     display: none;
@@ -158,5 +169,12 @@ footer {
 
   nav {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #main-nav-list li {
+    width: auto;
+    padding: 12px;
   }
 }
