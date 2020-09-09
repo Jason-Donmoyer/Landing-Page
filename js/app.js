@@ -2,22 +2,22 @@
 const navLinks = [{
     id: 'section1',
     title: 'Section One',
-    content: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex enim repudiandae saepe eos laudantium quibusdam aspernatur similique porro maxime excepturi quidem fuga voluptatibus, quos magni facilis quam nulla nemo. Animi quis a cum inventore fugiat molestias est pariatur illum!'
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat iusto a pariatur ut tempora cumque maiores quo neque facere. Hic at, reiciendis placeat esse neque voluptas quaerat architecto facere recusandae asperiores voluptate reprehenderit excepturi optio quas quisquam voluptatum animi dolorum dolores eligendi fuga vero rerum. Numquam debitis assumenda iusto facilis expedita, est sit? Debitis eaque aliquid unde, voluptatibus, tenetur eos voluptatem suscipit, sint officia accusamus veniam optio quis nihil. Sequi non, doloremque sed, laborum corrupti porro perspiciatis omnis impedit consequatur ab, dolorum ad? Hic corrupti pariatur minima ducimus nostrum. Maxime laudantium, voluptate quasi magni est voluptatem ipsa deleniti culpa aperiam architecto. Omnis, fuga harum. Magni aliquam sequi, molestias quam ipsam nam reprehenderit necessitatibus optio dolorem nemo debitis, blanditiis aut! Facere iure doloremque dignissimos mollitia aliquam magni enim eos similique magnam modi repellendus accusantium ipsa voluptatem fugit possimus itaque tempora accusamus veniam ipsam eaque, quisquam illo incidunt nemo odit! A?'
   },
   {
     id: 'section2',
     title: 'Section Two',
-    content: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex enim repudiandae saepe eos laudantium quibusdam aspernatur similique porro maxime excepturi quidem fuga voluptatibus, quos magni facilis quam nulla nemo. Animi quis a cum inventore fugiat molestias est pariatur illum!'
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat iusto a pariatur ut tempora cumque maiores quo neque facere. Hic at, reiciendis placeat esse neque voluptas quaerat architecto facere recusandae asperiores voluptate reprehenderit excepturi optio quas quisquam voluptatum animi dolorum dolores eligendi fuga vero rerum. Numquam debitis assumenda iusto facilis expedita, est sit? Debitis eaque aliquid unde, voluptatibus, tenetur eos voluptatem suscipit, sint officia accusamus veniam optio quis nihil. Sequi non, doloremque sed, laborum corrupti porro perspiciatis omnis impedit consequatur ab, dolorum ad? Hic corrupti pariatur minima ducimus nostrum. Maxime laudantium, voluptate quasi magni est voluptatem ipsa deleniti culpa aperiam architecto. Omnis, fuga harum. Magni aliquam sequi, molestias quam ipsam nam reprehenderit necessitatibus optio dolorem nemo debitis, blanditiis aut! Facere iure doloremque dignissimos mollitia aliquam magni enim eos similique magnam modi repellendus accusantium ipsa voluptatem fugit possimus itaque tempora accusamus veniam ipsam eaque, quisquam illo incidunt nemo odit! A?'
   },
   {
     id: 'section3',
     title: 'Section Three',
-    content: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex enim repudiandae saepe eos laudantium quibusdam aspernatur similique porro maxime excepturi quidem fuga voluptatibus, quos magni facilis quam nulla nemo. Animi quis a cum inventore fugiat molestias est pariatur illum!'
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat iusto a pariatur ut tempora cumque maiores quo neque facere. Hic at, reiciendis placeat esse neque voluptas quaerat architecto facere recusandae asperiores voluptate reprehenderit excepturi optio quas quisquam voluptatum animi dolorum dolores eligendi fuga vero rerum. Numquam debitis assumenda iusto facilis expedita, est sit? Debitis eaque aliquid unde, voluptatibus, tenetur eos voluptatem suscipit, sint officia accusamus veniam optio quis nihil. Sequi non, doloremque sed, laborum corrupti porro perspiciatis omnis impedit consequatur ab, dolorum ad? Hic corrupti pariatur minima ducimus nostrum. Maxime laudantium, voluptate quasi magni est voluptatem ipsa deleniti culpa aperiam architecto. Omnis, fuga harum. Magni aliquam sequi, molestias quam ipsam nam reprehenderit necessitatibus optio dolorem nemo debitis, blanditiis aut! Facere iure doloremque dignissimos mollitia aliquam magni enim eos similique magnam modi repellendus accusantium ipsa voluptatem fugit possimus itaque tempora accusamus veniam ipsam eaque, quisquam illo incidunt nemo odit! A?'
   },
   {
     id: 'section4',
     title: 'Section Four',
-    content: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut ex enim repudiandae saepe eos laudantium quibusdam aspernatur similique porro maxime excepturi quidem fuga voluptatibus, quos magni facilis quam nulla nemo. Animi quis a cum inventore fugiat molestias est pariatur illum!'
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat iusto a pariatur ut tempora cumque maiores quo neque facere. Hic at, reiciendis placeat esse neque voluptas quaerat architecto facere recusandae asperiores voluptate reprehenderit excepturi optio quas quisquam voluptatum animi dolorum dolores eligendi fuga vero rerum. Numquam debitis assumenda iusto facilis expedita, est sit? Debitis eaque aliquid unde, voluptatibus, tenetur eos voluptatem suscipit, sint officia accusamus veniam optio quis nihil. Sequi non, doloremque sed, laborum corrupti porro perspiciatis omnis impedit consequatur ab, dolorum ad? Hic corrupti pariatur minima ducimus nostrum. Maxime laudantium, voluptate quasi magni est voluptatem ipsa deleniti culpa aperiam architecto. Omnis, fuga harum. Magni aliquam sequi, molestias quam ipsam nam reprehenderit necessitatibus optio dolorem nemo debitis, blanditiis aut! Facere iure doloremque dignissimos mollitia aliquam magni enim eos similique magnam modi repellendus accusantium ipsa voluptatem fugit possimus itaque tempora accusamus veniam ipsam eaque, quisquam illo incidunt nemo odit! A?'
   }
 ];
 
@@ -47,6 +47,7 @@ navLinks.forEach((item) => {
 
   // Creates new content div
 
+
   let flexContainer = document.createElement('div');
   flexContainer.classList.add('flex-container');
   flexContainer.setAttribute('id', item.id);
@@ -65,3 +66,9 @@ navLinks.forEach((item) => {
 hamburgerMenu.addEventListener('click', () => {
   nav.style.display === 'flex' ? nav.style.display = 'none' : nav.style.display = 'flex';
 });
+
+const flexContainers = document.querySelectorAll('.flex-container');
+
+for (let i = 0; i < flexContainers.length; i++) {
+  flexContainers[i].setAttribute('tabindex', i);
+}

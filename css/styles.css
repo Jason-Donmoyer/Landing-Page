@@ -7,6 +7,10 @@
   --light-blue: #66bfbf;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /*********** GRID CONTAINER ***********/
 
 .container {
@@ -25,12 +29,13 @@
 
 header {
   grid-area: hd;
+  /* position: sticky; */
+  /* top: 0; */
   background-color: var(--light-red);
   color: #fff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  ;
   justify-content: space-between;
 }
 
@@ -104,9 +109,25 @@ main {
 .flex-container {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 100vh;
+  margin-bottom: 5px;
   border-top: 20px solid var(--dark-blue);
   padding: 20px;
+}
+
+.flex-container:focus {
+  border-top: 40px solid var(--light-red);
+  outline: none;
+}
+
+.flex-container:hover {
+  border-top: 40px solid var(--light-red);
+  outline: none;
+}
+
+.flex-container:active {
+  border-top: 40px solid var(--light-red);
+  outline: none;
 }
 
 
@@ -115,4 +136,27 @@ main {
 
 footer {
   grid-area: ft;
+}
+
+
+
+/*********** MEDIA QURIES ***********/
+
+
+@media screen and (min-width: 600px) {
+  .container {
+    grid-template-areas:
+      "hd hd nv nv"
+      "hd hd nv nv"
+      "mn mn mn mn"
+      "ft ft ft ft"
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+  }
 }
