@@ -1,5 +1,6 @@
 /*********** VARIABLES ***********/
 
+
 :root {
   /* Colors */
   --light-grey: #e0ece4;
@@ -14,16 +15,20 @@
   --bold: 700;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
+
 
 body {
   font-family: var(--poppins);
   font-weight: 300;
 }
 
+
 /*********** GRID CONTAINER ***********/
+
 
 .container {
   display: grid;
@@ -41,8 +46,6 @@ body {
 
 header {
   grid-area: hd;
-  /* position: sticky; */
-  /* top: 0; */
   background-color: var(--light-red);
   color: #fff;
   display: flex;
@@ -50,6 +53,9 @@ header {
   align-items: center;
   justify-content: space-between;
 }
+
+
+/*********** HEADER TAGS ***********/
 
 
 h1,
@@ -61,12 +67,12 @@ h6 {
   font-family: var(--kumbh-sans);
 }
 
+
 h1 {
   font-size: 3em;
   padding-left: 0.3em;
   font-weight: var(--bold);
 }
-
 
 
 /*********** Hmburger Menu ************/
@@ -85,7 +91,9 @@ h1 {
   margin: 8px 0;
 }
 
+
 /************ MAIN NAv ************/
+
 
 nav {
   grid-area: nv;
@@ -97,9 +105,11 @@ nav {
   flex-wrap: wrap;
 }
 
+
 #main-nav-list {
   padding-inline-start: 0;
 }
+
 
 #main-nav-list li {
   display: inline-block;
@@ -125,6 +135,7 @@ nav {
   text-shadow: 1px 1px 1px var(--light-red);
 }
 
+
 #main-nav-list li a:hover {
   color: var(--light-red);
   text-shadow: 1px 1px 1px #fff;
@@ -139,6 +150,7 @@ nav {
 #main-nav-list li a:active {
   outline: none;
 }
+
 
 /************ MAIN CONTENT ************/
 
@@ -155,6 +167,7 @@ main {
   border-top: 20px solid var(--dark-blue);
   padding: 20px;
 }
+
 
 .flex-container:focus {
   border: 1px solid var(--light-red);
@@ -185,18 +198,11 @@ footer {
 }
 
 
-
 /*********** MEDIA QURIES ***********/
 
 
 @media screen and (min-width: 600px) {
-  /* .container {
-    grid-template-areas:
-      "hd hd nv nv"
-      "hd hd nv nv"
-      "mn mn mn mn"
-      "ft ft ft ft"
-  } */
+
 
   header {
     justify-content: center;
@@ -208,17 +214,18 @@ footer {
     display: none;
   }
 
+
   nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
+
   #main-nav-list li {
     width: auto;
     padding: 12px;
   }
-
 
 
 }
