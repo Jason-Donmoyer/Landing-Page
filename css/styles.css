@@ -1,14 +1,26 @@
 /*********** VARIABLES ***********/
 
 :root {
+  /* Colors */
   --light-grey: #e0ece4;
   --light-red: #ff4b5c;
   --dark-blue: #056674;
   --light-blue: #66bfbf;
+
+  /* Fonts */
+  --kumbh-sans: 'Kumbh Sans', sans-serif;
+  --poppins: 'Poppins', sans-serif;
+  --medium: 500;
+  --bold: 700;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--poppins);
+  font-weight: 300;
 }
 
 /*********** GRID CONTAINER ***********/
@@ -39,10 +51,23 @@ header {
   justify-content: space-between;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--kumbh-sans);
+}
+
 h1 {
   font-size: 3em;
   padding-left: 0.3em;
+  font-weight: var(--bold);
 }
+
+
 
 /*********** Hmburger Menu ************/
 
@@ -87,6 +112,12 @@ nav {
   border-radius: 4px;
 }
 
+
+#main-nav-list li:focus-within {
+  background-color: var(--dark-blue);
+}
+
+
 #main-nav-list li a {
   text-decoration: none;
   display: block;
@@ -97,6 +128,16 @@ nav {
 #main-nav-list li a:hover {
   color: var(--light-red);
   text-shadow: 1px 1px 1px #fff;
+}
+
+
+#main-nav-list li a:focus {
+  outline: none;
+}
+
+
+#main-nav-list li a:active {
+  outline: none;
 }
 
 /************ MAIN CONTENT ************/
@@ -116,17 +157,17 @@ main {
 }
 
 .flex-container:focus {
-  border-top: 40px solid var(--light-red);
+  border: 1px solid var(--light-red);
+  font-weight: var(--medium);
+  line-height: 1.25em;
   outline: none;
 }
 
-.flex-container:hover {
-  border-top: 40px solid var(--light-red);
-  outline: none;
-}
 
 .flex-container:active {
-  border-top: 40px solid var(--light-red);
+  border: 1px solid var(--light-red);
+  font-weight: var(--medium);
+  line-height: 1.25em;
   outline: none;
 }
 
@@ -177,4 +218,7 @@ footer {
     width: auto;
     padding: 12px;
   }
+
+
+
 }
