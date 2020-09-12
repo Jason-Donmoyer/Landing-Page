@@ -42,40 +42,17 @@ navContent.forEach((item) => {
 
 const navItems = document.querySelectorAll('.nav-item');
 const navLinks = document.querySelectorAll('#main-nav-list li a');
-const mobileMedia = window.matchMedia('(max-width: 600px)');
-const deskMedia = window.matchMedia('(min-width: 601px)');
 
-mobileMedia.addListener(X);
 
-function X() {
-  mobileMedia.matches ? console.log('foo') : console.log('bar');
-  if (deskMedia.matches) {
-    nav.style.position = 'sticky';
-    nav.style.top = 0;
-  } else {
-    nav.style.position = '';
-  }
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].removeAttribute('tabindex', i);
 }
 
 
-
-
-
-//deskMedia.matches ? console.log('foo') : console.log('bar');
-
-// changeNavStick(mediaQue);
-// if (window.matchMedia("(min-width: 600px)").matches) {
-//   nav.style.postion = 'sticky';
-//   nav.style.top = 0;
-// } else {
-//   nav.style.postion = '';
-//   nav.style.top = '';
-//}
-
 navLinks.forEach((navLink) => {
   navLink.addEventListener('click', (e) => {
-    // e.preventDefault;
-    e.target.parentElement.style.backgroundColor = 'var(--dark-blue)';
+    e.preventDefault;
+    // e.target.parentElement.style.backgroundColor = 'var(--dark-blue)';
     let scrollOptions = {
       top: navLink.href,
       behavior: 'smooth',
@@ -95,6 +72,16 @@ const flexContainers = document.querySelectorAll('.flex-container');
 for (let i = 0; i < flexContainers.length; i++) {
   flexContainers[i].setAttribute('tabindex', i);
 }
+
+
+
+document.addEventListener('scroll', () => {
+  for (let i = 0; i < flexContainers.length; i++) {
+    let ele = flexContainers[i];
+    elementInViewport(ele);
+  }
+});
+
 
 // Hamburger Menu Event Listener
 // Shows and hides nav menu on mobile devices
@@ -135,12 +122,15 @@ function createContent(item) {
   mainContent.appendChild(flexContainer);
 }
 
-function changeNavStick(x) {
-  if (x.matches) {
-    nav.style.postion = 'sticky';
-    nav.style.top = 0;
+function elementInViewport(myElement) {
+
+  var bounding = myElement.getBoundingClientRect();
+
+  if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+    myElement.style.color = 'green';
+    console.log('Element ' + myElement.id + ' is in the viewport!');
   } else {
-    nav.style.postion = '';
-    nav.style.top = '';
+    myElement.style.color = 'black';
+    console.log('Element ' + myElement.id + ' is NOT in the viewport!');
   }
 }

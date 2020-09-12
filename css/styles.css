@@ -97,8 +97,7 @@ h1 {
 
 nav {
   grid-area: nv;
-  /* position: sticky; */
-  /* top: 0; */
+  /* width: 100vw; */
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -107,9 +106,16 @@ nav {
   flex-wrap: wrap;
 }
 
+.sticky-nav {
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
 
 #main-nav-list {
   padding-inline-start: 0;
+  background-color: var(--light-grey);
 }
 
 
@@ -164,7 +170,7 @@ main {
 .flex-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 80vh;
   margin-bottom: 5px;
   border-top: 20px solid var(--dark-blue);
   padding: 40px 20px 20px 20px;
@@ -221,6 +227,8 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
   }
 
 
