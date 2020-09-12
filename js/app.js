@@ -23,10 +23,12 @@ const navContent = [{
 
 // Variables
 
+const header = document.querySelector('header');
 const mainNavArea = document.querySelector('#main-nav-list');
 const nav = document.querySelector('nav');
 const mainContent = document.getElementById('main-content');
 const hamburgerMenu = document.getElementById('hamburger-menu');
+
 
 
 // Get content onto page
@@ -38,6 +40,62 @@ navContent.forEach((item) => {
   createContent(item);
 });
 
+const navItems = document.querySelectorAll('.nav-item');
+const navLinks = document.querySelectorAll('#main-nav-list li a');
+const mobileMedia = window.matchMedia('(max-width: 600px)');
+const deskMedia = window.matchMedia('(min-width: 601px)');
+
+mobileMedia.addListener(X);
+
+function X() {
+  mobileMedia.matches ? console.log('foo') : console.log('bar');
+  if (deskMedia.matches) {
+    nav.style.position = 'sticky';
+    nav.style.top = 0;
+  } else {
+    nav.style.position = '';
+  }
+}
+
+
+
+
+
+//deskMedia.matches ? console.log('foo') : console.log('bar');
+
+// changeNavStick(mediaQue);
+// if (window.matchMedia("(min-width: 600px)").matches) {
+//   nav.style.postion = 'sticky';
+//   nav.style.top = 0;
+// } else {
+//   nav.style.postion = '';
+//   nav.style.top = '';
+//}
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener('click', (e) => {
+    // e.preventDefault;
+    e.target.parentElement.style.backgroundColor = 'var(--dark-blue)';
+    let scrollOptions = {
+      top: navLink.href,
+      behavior: 'smooth',
+    }
+    window.scrollTo(scrollOptions);
+    // console.log(navLink.href);
+  });
+});
+
+
+
+// Adds tabindex to flex containers for active and focus states
+
+const flexContainers = document.querySelectorAll('.flex-container');
+
+
+for (let i = 0; i < flexContainers.length; i++) {
+  flexContainers[i].setAttribute('tabindex', i);
+}
+
 // Hamburger Menu Event Listener
 // Shows and hides nav menu on mobile devices
 
@@ -45,27 +103,24 @@ hamburgerMenu.addEventListener('click', () => {
   nav.style.display === 'flex' ? nav.style.display = 'none' : nav.style.display = 'flex';
 });
 
-// Adds tabindex to flex containers for active and focus states
-
-const flexContainers = document.querySelectorAll('.flex-container');
-
-for (let i = 0; i < flexContainers.length; i++) {
-  flexContainers[i].setAttribute('tabindex', i);
-}
 
 // FUNCTIONS
 
+// Creates new nav menu link
+
 function createNavLink(item) {
   let newListItem = document.createElement('li');
-  newListItem.classList.add('navItem');
+  newListItem.classList.add('nav-item');
   let listItemLink = document.createElement('a');
-  listItemLink.classList.add('navLink');
+  listItemLink.classList.add('nav-link');
   listItemLink.href = '#' + item.id;
   listItemLink.innerHTML = item.title;
 
   newListItem.appendChild(listItemLink);
   mainNavArea.appendChild(newListItem);
 }
+
+// Creates new content div
 
 function createContent(item) {
   let flexContainer = document.createElement('div');
@@ -78,4 +133,14 @@ function createContent(item) {
   flexContainer.appendChild(newContentHeader);
   flexContainer.appendChild(newContent);
   mainContent.appendChild(flexContainer);
+}
+
+function changeNavStick(x) {
+  if (x.matches) {
+    nav.style.postion = 'sticky';
+    nav.style.top = 0;
+  } else {
+    nav.style.postion = '';
+    nav.style.top = '';
+  }
 }

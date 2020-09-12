@@ -97,6 +97,8 @@ h1 {
 
 nav {
   grid-area: nv;
+  /* position: sticky; */
+  /* top: 0; */
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -165,7 +167,7 @@ main {
   height: 100vh;
   margin-bottom: 5px;
   border-top: 20px solid var(--dark-blue);
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
 }
 
 
