@@ -73,7 +73,7 @@ for (let i = 0; i < flexContainers.length; i++) {
   flexContainers[i].setAttribute('tabindex', i);
 }
 
-
+// Check to see if content sections are in viewport
 
 document.addEventListener('scroll', () => {
   for (let i = 0; i < flexContainers.length; i++) {
@@ -90,6 +90,8 @@ hamburgerMenu.addEventListener('click', () => {
   nav.style.display === 'flex' ? nav.style.display = 'none' : nav.style.display = 'flex';
 });
 
+// SECTION TO HIDE NAV ON CLICK ON MOBILE DEVICES
+// Work in progress
 
 // FUNCTIONS
 
@@ -122,15 +124,23 @@ function createContent(item) {
   mainContent.appendChild(flexContainer);
 }
 
+// Actions for content in focus/active state
+
 function elementInViewport(myElement) {
 
   var bounding = myElement.getBoundingClientRect();
 
   if (bounding.top >= 0 && bounding.left >= 0 && bounding.right <= (window.innerWidth || document.documentElement.clientWidth) && bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
-    myElement.style.color = 'green';
-    console.log('Element ' + myElement.id + ' is in the viewport!');
+    for (let i = 0; i < navLinks.length; i++) {
+      let thisLink = `#${myElement.id}`;
+      if (navLinks[i].getAttribute('href') === thisLink) {
+        console.log(thisLink);
+        navLinks[i].parentElement.style.backgroundColor = 'var(--dark-blue)';
+      } else {
+        navLinks[i].parentElement.style.backgroundColor = 'var(--light-blue)';
+      }
+    }
   } else {
     myElement.style.color = 'black';
-    console.log('Element ' + myElement.id + ' is NOT in the viewport!');
   }
 }
